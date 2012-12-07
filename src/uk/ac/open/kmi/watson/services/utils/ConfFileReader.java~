@@ -1,6 +1,10 @@
 package uk.ac.open.kmi.watson.services.utils;
 
-import java.io.*;
+import java.io.BufferedInputStream;
+import java.io.DataInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Hashtable;
 import java.util.StringTokenizer;
 
@@ -18,26 +22,26 @@ public class ConfFileReader {
 	}
 
 	private void load() {
-		try {
-		    File file = new File(this.filename);
-		    FileInputStream fis = new FileInputStream(file);
-		// InputStream fis = getClass().getResourceAsStream(this.filename);
+		// File file = new File(this.filename);
+		InputStream fis = getClass().getResourceAsStream(this.filename);
 		// FileInputStream fis = null;
-		    BufferedInputStream bis = null;
-		    DataInputStream dis = null;
-		// fis = new FileInputStream(file);
-		    bis = new BufferedInputStream(fis);
-		    dis = new DataInputStream(bis);
-		    while (dis.available() != 0) {
-			String line = dis.readLine();
-			analyseLine(line);
-		    }
-		    
-		    // dispose all the resources after using them.
-		    fis.close();
-		    bis.close();
-		    dis.close();
-		    
+		BufferedInputStream bis = null;
+		DataInputStream dis = null;
+
+		try {
+			// fis = new FileInputStream(file);
+			bis = new BufferedInputStream(fis);
+			dis = new DataInputStream(bis);
+			while (dis.available() != 0) {
+				String line = dis.readLine();
+				analyseLine(line);
+			}
+
+			// dispose all the resources after using them.
+			fis.close();
+			bis.close();
+			dis.close();
+
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -46,11 +50,10 @@ public class ConfFileReader {
 	}
 
 	private void analyseLine(String line) {
-	    // System.out.println("here:: "+line);
-	    if (line.trim().equals("")) return;
-	    String attribute = line.substring(0, line.indexOf("=")).trim();
-	    String value = line.substring(line.indexOf("=")+1, line.length()).trim();
-	    attributeValue.put(attribute, value);
+		// System.out.println("here:: "+line);
+		String attribute = line.substring(0, line.indexOf("=")).trim();
+		String value = line.substring(line.indexOf("=")+1, line.length()).trim();
+		attributeValue.put(attribute, value);
 	}
 
 	public String getStringParameter(String att) {

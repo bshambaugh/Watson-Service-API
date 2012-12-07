@@ -1,3 +1,144 @@
+/*
+ @prefix    :   <http://nwalsh.com/rdf/cvs#> .
+ @prefix  dc:   <http://purl.org/dc/elements/1.1/> .
+ @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+ 
+ <>  dc:title    "Service.java";
+ :Revision   "$Revision: 1.1 $";
+ :Author     "$Author: mathieu $";
+ :date       "$Date: 2010/01/12 16:17:25 $";
+ :Log        """
+ $Log: SemanticContentSearch.java,v $
+ Revision 1.1  2010/01/12 16:17:25  mathieu
+ *** empty log message ***
+
+ Revision 1.9  2010/01/11 12:11:13  mathieu
+ *** empty log message ***
+
+ Revision 1.8  2009/08/25 16:50:27  mathieu
+ *** empty log message ***
+
+ Revision 1.7  2009/06/12 17:24:27  mathieu
+ *** empty log message ***
+
+ Revision 1.6  2009/04/28 09:01:18  mathieu
+ first attempt at filters
+
+ Revision 1.5  2009/04/24 16:31:04  mathieu
+ *** empty log message ***
+
+ Revision 1.4  2009/03/26 18:15:38  mathieu
+ *** empty log message ***
+
+ Revision 1.3  2009/01/12 14:57:50  mathieu
+ *** empty log message ***
+
+ Revision 1.2  2008/11/20 11:12:39  mathieu
+ *** empty log message ***
+
+ Revision 1.1  2008/11/12 11:45:11  mathieu
+ *** empty log message ***
+
+ Revision 1.1  2008/11/12 10:54:05  mathieu
+ *** empty log message ***
+
+ Revision 1.30  2008/10/27 14:10:55  mathieu
+ *** empty log message ***
+
+ Revision 1.29  2008/10/22 16:19:40  mathieu
+ *** empty log message ***
+
+ Revision 1.28  2008/10/03 16:12:26  mathieu
+ *** empty log message ***
+
+ Revision 1.27  2008/10/02 17:10:21  mathieu
+ *** empty log message ***
+
+ Revision 1.26  2008/10/02 16:19:53  mathieu
+ *** empty log message ***
+
+ Revision 1.25  2008/09/30 09:38:38  mathieu
+ *** empty log message ***
+
+ Revision 1.24  2008/06/10 08:04:44  mathieu
+ *** empty log message ***
+
+ Revision 1.23  2008/06/09 11:56:35  mathieu
+ eliminate unused WildcardQueries
+
+ Revision 1.22  2008/06/09 11:04:13  mathieu
+ *** empty log message ***
+
+ Revision 1.21  2008/06/09 08:45:36  mathieu
+ *** empty log message ***
+
+ Revision 1.20  2008/06/03 15:01:59  mathieu
+ *** empty log message ***
+
+ Revision 1.19  2008/06/03 11:12:13  mathieu
+ *** empty log message ***
+
+ Revision 1.18  2008/06/02 11:03:53  mathieu
+ *** empty log message ***
+
+ Revision 1.17  2008/06/02 11:02:58  mathieu
+ *** empty log message ***
+
+ Revision 1.16  2008/06/02 10:13:49  mathieu
+ *** empty log message ***
+
+ Revision 1.15  2008/06/02 10:07:29  mathieu
+ *** empty log message ***
+
+ Revision 1.14  2008/06/02 10:01:21  mathieu
+ *** empty log message ***
+
+ Revision 1.13  2008/05/30 15:28:20  mathieu
+ *** empty log message ***
+
+ Revision 1.12  2008/05/30 13:40:36  mathieu
+ *** empty log message ***
+
+ Revision 1.11  2008/05/29 14:20:23  mathieu
+ *** empty log message ***
+
+ Revision 1.10  2008/03/31 08:37:13  mathieu
+ *** empty log message ***
+
+ Revision 1.9  2008/03/06 17:12:36  mathieu
+ add getImportedBy
+
+ Revision 1.8  2008/02/20 11:46:35  mathieu
+ reintroduction of the OMV stuff
+
+ Revision 1.7  2008/02/14 10:12:24  mathieu
+ Cleaned some of the TODOs
+
+ Revision 1.6  2008/02/14 10:05:29  mathieu
+ bit of cleaning... removed lowLevelAPI
+
+ Revision 1.5  2008/02/14 09:54:29  mathieu
+ added import and nbStatements in OntologySearch
+
+ Revision 1.4  2008/02/08 17:57:13  mathieu
+ *** empty log message ***
+
+ Revision 1.3  2008/01/28 18:33:24  mathieu
+ *** empty log message ***
+
+ Revision 1.2  2008/01/28 18:22:59  mathieu
+ *** empty log message ***
+
+ Revision 1.1  2008/01/26 09:00:14  mathieu
+ Lots of updates
+
+ Revision 1.1  2007/01/16 12:22:05  lg3388
+ Higher level API
+
+ """;
+ :Id         "$Id: SemanticContentSearch.java,v 1.1 2010/01/12 16:17:25 mathieu Exp $" .
+ */
+
 package uk.ac.open.kmi.watson.services;
 
 import java.io.DataInputStream;
